@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Disease | Medi-Kit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .about-box {
+      background-color: #1a1a1a;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      max-width: 700px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .info-section {
+      margin-bottom: 1.5rem;
+      background-color: #2a2a2a;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .info-section h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #9b65ff;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 2rem;
+      padding: 12px;
+      background-color: #32b2f2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #2196db;
+    }
+  </style>
+</head>
+<body>
+  <div class="about-box">
+    <h2>Disease & Doctor Info</h2>
+
+    <div class="info-section" id="disease-info">
+      <h3>Possible Disease:</h3>
+      <p>Common Cold</p>
+    </div>
+
+    <div class="info-section" id="doctor-info">
+      <h3>Recommended Doctor:</h3>
+      <p>General Physician</p>
+    </div>
+
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+
+  <script src="scripts/flow.js"></script>
+</body>
+</html>

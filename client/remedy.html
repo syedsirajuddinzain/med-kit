@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Remedies | Medi-Kit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .remedy-box {
+      background-color: #1a1a1a;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      max-width: 700px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+
+    .remedy-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .remedy-list li {
+      margin-bottom: 1rem;
+      background-color: #2a2a2a;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 2rem;
+      padding: 12px;
+      background-color: #32b2f2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #2196db;
+    }
+  </style>
+</head>
+<body>
+  <div class="remedy-box">
+    <h2>Recommended Home Remedies</h2>
+    <ul class="remedy-list" id="remedy-list">
+      <li>Drink warm fluids to soothe sore throat.</li>
+      <li>Use a humidifier to ease congestion.</li>
+      <li>Take rest and stay hydrated.</li>
+    </ul>
+    <a href="precautions.html" class="btn">Next: View Precautions</a>
+  </div>
+
+  <script src="scripts/flow.js"></script>
+</body>
+</html>
