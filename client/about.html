@@ -81,7 +81,22 @@
 
     <a href="index.html" class="btn">Back to Home</a>
   </div>
-
+  <script>
+    const diseaseResult = localStorage.getItem('diseaseResult');
+    
+    if (diseaseResult) {
+      const parsed = JSON.parse(diseaseResult);
+      const diseaseName = parsed[0]?.name || "Unknown";
+    
+      document.querySelector('#disease-info p').textContent = diseaseName;
+      document.querySelector('#doctor-info p').textContent =
+        diseaseName === "Unknown" ? "General Physician" :
+        diseaseName === "Common Cold" ? "General Physician" :
+        diseaseName === "Flu" ? "Infectious Disease Specialist" :
+        "Allergist";
+    }
+    </script>
+  <script src="scripts/firebase.js"></script>
   <script src="scripts/flow.js"></script>
 </body>
 </html>

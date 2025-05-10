@@ -79,7 +79,38 @@
       <button type="submit" class="btn">Get Info</button>
     </form>
   </div>
-
+  <script src="scripts/firebase.js"></script>
   <script src="scripts/flow.js"></script>
+  <script>
+    document.getElementById('symptom-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      
+      const symptoms = document.getElementById('symptoms').value.trim();
+      
+      if (!symptoms) {
+        alert("Please enter your symptoms.");
+        return;
+      }
+    
+      try {
+        const response = await fetch('http://localhost:5000/api/disease/match', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ symptoms })
+        });
+    
+        const data = await response.json();
+    
+        localStorage.setItem('diseaseResult', JSON.stringify(data.diseases));
+        localStorage.setItem('userSymptoms', symptoms);
+    
+        window.location.href = 'remedy.html';
+      } catch (error) {
+        alert("Could not connect to backend.");
+      }
+    });
+    </script>
 </body>
 </html>

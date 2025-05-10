@@ -74,7 +74,14 @@
     </ul>
     <a href="precautions.html" class="btn">Next: View Precautions</a>
   </div>
-
+  <script>
+    const symptoms = localStorage.getItem('userSymptoms');
+    if (symptoms) {
+      const list = document.getElementById('remedy-list');
+      list.innerHTML = `<li>You entered: <strong>${symptoms}</strong></li>`;
+    }
+    </script>
+  <script src="scripts/firebase.js"></script>
   <script src="scripts/flow.js"></script>
 </body>
 </html>

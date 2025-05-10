@@ -1,8 +1,17 @@
-const express = require('express');
+import express from 'express';
+import { matchSymptoms } from '../utils/matchSymptoms.js';
+
 const router = express.Router();
-const verifyToken = require('../middleware/authMiddleware');
-const { getDiseaseData } = require('../controllers/diseaseController');
 
-router.post('/predict', verifyToken, getDiseaseData);
+router.post('/match', (req, res) => {
+  const { symptoms } = req.body;
 
-module.exports = router;
+  if (!symptoms || typeof symptoms !== 'string') {
+    return res.status(400).json({ error: 'Invalid symptoms input' });
+  }
+
+  const result = matchSymptoms(symptoms);
+  res.json({ diseases: result });
+});
+
+export default router;
